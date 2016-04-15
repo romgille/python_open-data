@@ -21,7 +21,7 @@ def tri_airports(csvfile):
         for i in l:
             valeur = Name(i[2], i[3], (i[6]), (i[7]), i[10])
             dictio[i[1]] = valeur
-        print(dictio)
+        return dictio
         # return dictio
 
 
@@ -45,8 +45,7 @@ def tri_airlines(csvfile):
         for i in l:
             valeur = Company(i[6])
             dictio[i[1]] = valeur
-        print(dictio)
-        # return dictio
+        return dictio        # return dictio
 
 
 def orthodromie(lat1, lon1, lat2, lon2):
@@ -63,6 +62,4 @@ def orthodromie(lat1, lon1, lat2, lon2):
     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
     d = earthRadius * c
 
-    return d
-
-print(orthodromie(48.85, 2.35, 40.717, -74))
+    return d  # retourne la distance orthodromique en mètres
