@@ -1,4 +1,52 @@
 import numpy as np
+import csv
+from collections import namedtuple
+
+
+def tri_airports(csvfile):
+
+    # Liste
+    ordre = []
+    # Dictionnaire
+    dictio = {}
+
+    with open(csvfile, 'r') as myfile:
+        r = csv.reader(myfile, delimiter=',')
+        next(r, None)   # permet de ne pas prendre la derniere ligne du fichier
+        l = list(r)
+
+# on veut la colonne 1 et 7
+
+        Name = namedtuple('Name', ['Ville', 'Pays', 'Lat', 'Long', 'Contient'])
+        for i in l:
+            valeur = Name(i[2], i[3], (i[6]), (i[7]), i[10])
+            dictio[i[1]] = valeur
+        print(dictio)
+        # return dictio
+
+
+def tri_airlines(csvfile):
+
+    # Liste
+    ordre = []
+
+    # Dictionnaire
+    dictio = {}
+
+    with open(csvfile, 'r') as myfile:
+        r = csv.reader(myfile, delimiter=',')
+        next(r, None)   # permet de ne pas prendre la derniere ligne du fichier
+        l = list(r)
+        # print(l[0][1])
+
+# on veut la colonne 1 et 7
+
+        Company = namedtuple('Company', ['Pays'])
+        for i in l:
+            valeur = Company(i[6])
+            dictio[i[1]] = valeur
+        print(dictio)
+        # return dictio
 
 
 def orthodromie(lat1, lon1, lat2, lon2):
