@@ -5,7 +5,6 @@
 ## Le rapport @Romain
 
 le rapport est présent
-le rapport est au format pdf
 le rapport est de qualité
 
 # Exécution du code @Romain

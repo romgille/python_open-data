@@ -1,5 +1,5 @@
-from variables import *
-from fonctions import *
+from scripts.variables import *
+from scripts.fonctions import *
 
 tri_airlines(csvAirline)
 tri_airports(csvAirport)
