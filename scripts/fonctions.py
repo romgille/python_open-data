@@ -5,8 +5,6 @@ from collections import namedtuple
 
 def tri_airports(csvfile):
 
-    # Liste
-    ordre = []
     # Dictionnaire
     dictio = {}
 
@@ -17,18 +15,15 @@ def tri_airports(csvfile):
 
 # on veut la colonne 1 et 7
 
-        Name = namedtuple('Name', ['Ville', 'Pays', 'Lat', 'Long', 'Contient'])
+        ID = namedtuple('ID', ['Ville', 'Pays', 'Lat', 'Long', 'Contient'])
         for i in l:
-            valeur = Name(i[2], i[3], (i[6]), (i[7]), i[10])
-            dictio[i[1]] = valeur
+            valeur = ID(i[2], i[3], (i[6]), (i[7]), i[10])
+            dictio[i[4]] = valeur
         return dictio
         # return dictio
 
 
 def tri_airlines(csvfile):
-
-    # Liste
-    ordre = []
 
     # Dictionnaire
     dictio = {}
@@ -63,3 +58,12 @@ def orthodromie(lat1, lon1, lat2, lon2):
     d = earthRadius * c
 
     return d  # retourne la distance orthodromique en mètres
+
+
+def distance2Airports(csvfile, code1, code2):
+    donnee = tri_airports(csvfile)
+    lat1 = float(donnee[code1][2])
+    lon1 = float(donnee[code1][3])
+    lat2 = float(donnee[code2][2])
+    lon2 = float(donnee[code2][3])
+    print(orthodromie(lat1, lon1, lat2, lon2))
