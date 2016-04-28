@@ -13,9 +13,6 @@ le script s'exécute correctement dans l'environnement ESIEE
 
 ## Histogramme @Romain
 
-le script produit une figure de type histogramme
-l'histogramme est pertinent
-l'histogramme est renseigné (titre, axes)
 plusieurs histogrammes pertinents et renseignés sont présents
 
 ## Représentation géolocalisée @Valentine

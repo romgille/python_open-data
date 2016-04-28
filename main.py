@@ -1,7 +1,17 @@
 from scripts.variables import *
 from scripts.fonctions import *
 
-tri_airlines(csvAirline)
-tri_airports(csvAirport)
-# print(orthodromie(48.85, 2.35, 40.717, -74))
-print(distance2Airports(csvAirport, "LPY", "CDG"))
+
+# Creation du fichier csv (optionnel) decommenter pour utiliser.
+# Tres long a l'execution
+
+# createCsvDistance()
+
+
+# Creation de l'histogramme
+
+histogram()
+
+
+# Creation de la map
+

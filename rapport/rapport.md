@@ -21,4 +21,6 @@ suivant le pays de départ.
 
 # Histogramme
 
+![Histogramme](img/histo.png)
+
 # Carte du monde
