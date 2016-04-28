@@ -1,34 +1,36 @@
+# Import Lib
 import numpy as np
 import csv
 from collections import namedtuple
 import matplotlib.pyplot as plt
+# Import persos
 from scripts.variables import *
 
 
 def csvToList(csvfile):
     with open(csvfile, 'r') as myfile:
-        r = csv.reader(myfile, delimiter=',')
-        next(r, None)
-        l = list(r)
-    return l
+        reader = csv.reader(myfile, delimiter=',')
+        next(reader, None)
+        liste = list(reader)
+    return liste
 
 
 def tri_airports():
     dic = {}
-    l = csvToList(csvAirport)
-    ID = namedtuple('ID', ['Ville', 'Pays', 'Lat', 'Long', 'Contient'])
-    for i in l:
-        valeur = ID(i[2], i[3], (i[6]), (i[7]), i[10])
+    liste = csvToList(csvAirport)
+    identifier = namedtuple('ID', ['Ville', 'Pays', 'Lat', 'Long', 'Contient'])
+    for i in liste:
+        valeur = identifier(i[2], i[3], (i[6]), (i[7]), i[10])
         dic[i[4]] = valeur
     return dic
 
 
 def tri_airlines():
     dic = {}
-    l = csvToList(csvAirline)
-    Company = namedtuple('Company', ['Pays'])
-    for i in l:
-        valeur = Company(i[6])
+    liste = csvToList(csvAirline)
+    company = namedtuple('Company', ['Pays'])
+    for i in liste:
+        valeur = company(i[6])
         dic[i[1]] = valeur
     return dic
 
@@ -66,26 +68,11 @@ def distance2Airports(csvfile, code1, code2):
 
 
 def createCsvDistance():
-    valeur = []
-    l = csvToList(csvRoutes)
+    liste = csvToList(csvRoutes)
     with open(csvDistance, 'w', encoding='utf-8') as csvfile:
-        c = csv.writer(csvfile, delimiter=',')
-        c.writerow(["Depart", "Arrivee", "Distance"])
-        for i in range(0, len(l)):
-            distance = distance2Airports(csvAirport, l[i][2], l[i][4])
-            c.writerow([l[i][2], l[i][4], distance])
+        csvVar = csv.writer(csvfile, delimiter=',')
+        csvVar.writerow(["Depart", "Arrivee", "Distance"])
+        for i in range(0, len(liste)):
+            distance = distance2Airports(csvAirport, liste[i][2], liste[i][4])
+            csvVar.writerow([liste[i][2], liste[i][4], distance])
             print(round(((i/67662)*100), 2), "%")
-
-
-def histogram():
-    l = csvToList(csvDistance)
-    a = []
-    for i in range(0, len(l)):
-        if l[i][2] != '':
-            a.append(float(l[i][2]))
-    b = list(range(1000000,10000000,100000))
-    n, bins, patches = plt.hist(a, bins=b)
-    plt.xlabel('Distance (en m)')
-    plt.ylabel('Nombre de vols')
-    plt.title('Nombre de vols par distance')
-    plt.savefig(histo)

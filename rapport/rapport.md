@@ -1,6 +1,7 @@
+
 ---
 title: Rapport projet Open Data Python
-author: Romain GILLE, Valentine Borie
+author: Romain GILLE, Valentine BORIE
 date: \today
 geometry: margin=1in
 ...
@@ -18,6 +19,8 @@ Ces données vont nous permettre de faire un histogramme des nombres de vols en
 fonction des distances orthodromiques entre deux aéroports. La carte du monde,
 représentera les différents trajet des avions que l'on colorera différemment
 suivant le pays de départ.
+
+\newpage
 
 # Histogramme
 
