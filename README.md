@@ -4,38 +4,37 @@
 
 ## Le rapport @Romain
 
-le rapport est présent
-le rapport est de qualité
+- le rapport est de qualité
 
 ## Exécution du code @Romain
 
-le script s'exécute correctement dans l'environnement ESIEE
+- le script s'exécute correctement dans l'environnement ESIEE
 
 ## Histogramme @Romain
 
-plusieurs histogrammes pertinents et renseignés sont présents
+- plusieurs histogrammes pertinents et renseignés sont présents
 
 ## Représentation géolocalisée @Valentine
 
-le script produit une représentation géolocalisée
-la représentation géolocalisée est pertinente
-la représentation géolocalisée est renseignée (titre, légende)
-une échelle de couleurs est présente
-le cas échéant, la taille des symboles est proportionnelle aux données
-plusieurs rg pertinentes et renseignées sont présentes
+- le script produit une représentation géolocalisée
+- la représentation géolocalisée est pertinente
+- la représentation géolocalisée est renseignée (titre, légende)
+- une échelle de couleurs est présente
+- le cas échéant, la taille des symboles est proportionnelle aux données
+- plusieurs rg pertinentes et renseignées sont présentes
 
 ## Qualité du code @Romain @Valentine
 
-le code est structuré en fonctions ou classes
-le code est lisible et commenté
-la gestion d'exceptions est mise en œuvre
-les structures de données et les modules sont adaptés
-l'algorithmique est pertinente
-le code présente une initiative remarquable (ex: interface graphique)
+- le code est structuré en fonctions ou classes
+- le code est lisible et commenté
+- la gestion d'exceptions est mise en œuvre
+- les structures de données et les modules sont adaptés
+- l'algorithmique est pertinente
+- le code présente une initiative remarquable (ex: interface graphique)
 
 ## Données @Valentine
 
-les données sont accessibles dynamiquement
+- les données sont accessibles dynamiquement
 
 # Code continent 
 E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand),
