@@ -1,14 +1,23 @@
 from pathlib import Path
 
-originPath = Path('.')
+ORIGINPATH = Path('.')
 
 # Data folder
-dataPath = Path(originPath / 'data/')
-csvDistance = str(dataPath) + "/" + "distance.csv"
-csvAirline = str(dataPath) + "/" + "airlines.csv"
-csvAirport = str(dataPath) + "/" + "airports.csv"
-csvCountries = str(dataPath) + "/" + "countries.csv"
-csvRoutes = str(dataPath) + "/" + "routes.csv"
-rapportPath = Path(originPath / 'rapport/')
-histoPath = Path(originPath / 'histogramme/')
-histo = str(histoPath) + "/" + "histo.png"
+DATAPATH = Path(ORIGINPATH / 'data/')
+CSVDISTANCE = str(DATAPATH) + "/" + "distance.csv"
+CSVAIRLINE = str(DATAPATH) + "/" + "airlines.csv"
+CSVAIRPORT = str(DATAPATH) + "/" + "airports.csv"
+CSVCOUNTRY = str(DATAPATH) + "/" + "countries.csv"
+CSVROUTES = str(DATAPATH) + "/" + "routes.csv"
+CSVLOCALISATION = str(DATAPATH) + "/" + "localisation.csv"
+
+# Rapport folder
+RAPPORTPATH = Path(ORIGINPATH / 'rapport/')
+
+# Histo folder
+HISTOPATH = Path(ORIGINPATH / 'histogramme/')
+HISTO = str(HISTOPATH) + "/" + "histo.png"
+
+# Map folder
+MAPPATH = Path(ORIGINPATH / 'map/')
+CARTE = str(MAPPATH) + "/" + "map.png"

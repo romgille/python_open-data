@@ -2,12 +2,12 @@
 import matplotlib.pyplot as plt
 # Imports perso
 from scripts.fonctions import csvToList
-from scripts.variables import histo
-from scripts.variables import csvDistance
+from scripts.variables import HISTO
+from scripts.variables import CSVDISTANCE
 
 
 def histogram():
-    liste = csvToList(csvDistance)
+    liste = csvToList(CSVDISTANCE)
     ordonnee = []
     for i in range(0, len(liste)):
         if liste[i][2] != '':
@@ -17,4 +17,5 @@ def histogram():
     plt.xlabel('Distance orthodromique (en m)')
     plt.ylabel('Nombre de vols')
     plt.title('Nombre de vols par distance')
-    plt.savefig(histo)
+    plt.savefig(HISTO)
+    plt.clf()

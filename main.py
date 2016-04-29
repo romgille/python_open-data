@@ -1,11 +1,12 @@
 from scripts.variables import *
 from scripts.fonctions import *
 from scripts.histo import histogram
+from scripts.carte import map
 
-# Creation du fichier csv (optionnel) decommenter pour utiliser.
-# Tres long a l'execution
+# Creation des fichiers csv
 
-# createCsvDistance()
+createCsvDistance()
+createCsvLocalisationRoute()
 
 
 # Creation de l'histogramme
@@ -15,3 +16,4 @@ histogram()
 
 # Creation de la map
 
+map()
